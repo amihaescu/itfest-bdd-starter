@@ -1,8 +1,18 @@
 package com.db.gt.itfest.sample;
 
-public class FirstClass {
+class FirstClass {
 
-    public String getString(){
-        return "String";
+    private String string;
+
+    FirstClass(String input){
+        this.string = input;
+    }
+
+    String getUpperCaseString(){
+        return string.toUpperCase();
+    }
+
+    String getLowerCaseString(){
+        return string.toLowerCase();
     }
 }

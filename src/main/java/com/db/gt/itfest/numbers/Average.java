@@ -2,15 +2,15 @@ package com.db.gt.itfest.numbers;
 
 import java.util.List;
 
-public class Average {
+class Average {
 
-    List<Integer> array;
+    private List<Integer> array;
 
-    public Average(List<Integer> array) {
+    Average(List<Integer> array) {
         this.array = array;
     }
 
-    public float calculate(){
+    float calculate(){
         int sum = 0;
         for (int i : array){
             sum += i;

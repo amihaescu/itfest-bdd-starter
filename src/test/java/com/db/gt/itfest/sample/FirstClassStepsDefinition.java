@@ -12,14 +12,19 @@ public class FirstClassStepsDefinition {
     private FirstClass firstClass;
     private String result;
 
-    @Given("^I have a First Class object$")
-    public void initializeObject(){
-        firstClass = new FirstClass();
+    @Given("^I have a First Class object initialized with value:(.*)$")
+    public void initializeObject(String input){
+        firstClass = new FirstClass(input);
     }
 
-    @When("^I call getString method$")
-    public void callMethod(){
-        result = firstClass.getString();
+    @When("^I call upper string method$")
+    public void callUpperMethod(){
+        result = firstClass.getUpperCaseString();
+    }
+
+    @When("^I call lower string method$")
+    public void callLowerMethod(){
+        result = firstClass.getLowerCaseString();
     }
 
     @Then("^I get (.*)$")
