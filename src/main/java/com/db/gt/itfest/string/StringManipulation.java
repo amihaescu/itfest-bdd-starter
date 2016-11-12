@@ -15,4 +15,16 @@ class StringManipulation {
     Boolean find(String input){
         return string.contains(input);
     }
+
+    /**
+     * Given a string, return a new string where the first and last chars have been exchanged.
+     * */
+    String frontBack(){
+        char[] chars = string.toCharArray();
+        int last = chars.length - 1;
+        char intermediate = chars[0];
+        chars[0] = chars[last];
+        chars[last] = intermediate;
+        return new String(chars);
+    }
 }

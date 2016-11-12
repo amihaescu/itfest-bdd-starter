@@ -35,6 +35,11 @@ public class StringManipSteps {
         found = stringManipulation.find(s);
     }
 
+    @When("I change the front to back")
+    public void frontToBack(){
+        result = stringManipulation.frontBack();
+    }
+
     @Then("^I expect to get the following char sequence: (.*)")
     public void expectSubString(String expected){
         assertEquals(expected.replace(", ",""), result);
@@ -48,5 +53,12 @@ public class StringManipSteps {
             assertFalse(found);
         }
     }
+
+    @Then("I expect the following string: (.*)")
+    public void checkFrontToBack(String frontBack){
+        assertEquals(frontBack, result);
+    }
+
+
 
 }
