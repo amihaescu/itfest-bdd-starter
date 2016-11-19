@@ -18,6 +18,7 @@ public class StringManipSteps {
     private StringManipulation stringManipulation;
     private String result;
     private Boolean found;
+    private Boolean containsE;
 
 
     @Given("^I have the string: (.*)")
@@ -40,6 +41,16 @@ public class StringManipSteps {
         result = stringManipulation.frontBack();
     }
 
+    @When("I call the front three method")
+    public void frontThreeStep(){
+        result = stringManipulation.frontThree();
+    }
+
+    @When("I check if it contains between 1 and 3 'e' chars.")
+    public void checkStringContainsE(){
+        containsE = stringManipulation.stringContainsE();
+    }
+
     @Then("^I expect to get the following char sequence: (.*)")
     public void expectSubString(String expected){
         assertEquals(expected.replace(", ",""), result);
@@ -59,6 +70,9 @@ public class StringManipSteps {
         assertEquals(frontBack, result);
     }
 
-
+    @Then("I expect the result to be: (.*)")
+    public void checkContainsEResult(Boolean s){
+        assertEquals(s, containsE);
+    }
 
 }
