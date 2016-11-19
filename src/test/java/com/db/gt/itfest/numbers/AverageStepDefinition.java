@@ -12,6 +12,7 @@ public class AverageStepDefinition {
 
     private Average average;
     private float result;
+    private boolean isPresent;
 
     @Given("^I have an average object with the values: (.*)")
     public void initialize(List<Integer> list) {
@@ -23,8 +24,18 @@ public class AverageStepDefinition {
         result = average.calculate();
     }
 
+    @When("I check if one of the first 4 elements in the array is a 9")
+    public void check(){
+        isPresent = average.arrayFrontNine();
+    }
+
     @Then("^I expect it to be (.*)")
     public void expectAvg(float expected){
         assertEquals(expected, result, 0.0001);
+    }
+
+    @Then("the result should be (.*)")
+    public void expectBooleanResult(Boolean b){
+        assertEquals(b, isPresent);
     }
 }
