@@ -26,8 +26,20 @@ Feature: speeding
     When the cops pull me over
     Then I get no fine
 
+  Scenario: I am doing 85 and it my birthday
+    Given I am cruising along at 85 miles per hour
+    And It's  my birthday
+    When the cops pull me over
+    Then I get small fine
+
+  Scenario: I am doing 87 and it my birthday
+    Given I am cruising along at 87 miles per hour
+    And It's  my birthday
+    When the cops pull me over
+    Then I get big fine
+
   Scenario: I am doing 85 and it's not my birthday
-    Given I am cruising along at 65 miles per hour
+    Given I am cruising along at 85 miles per hour
     And It's not my birthday
     When the cops pull me over
     Then I get big fine
