@@ -6,7 +6,6 @@ Feature: sleep in
     When I check if I can sleep in late
     Then I see that I can
 
-
   Scenario: Weekend holiday
     Given It is Saturday
     And I am on holiday

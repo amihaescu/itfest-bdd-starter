@@ -40,6 +40,11 @@ public class NumbersStepDefinition {
         closerTo = numbers.closerTo(c);
     }
 
+    @When("I check to see there are no triplets")
+    public void checkTriplets(){
+        isPresent = numbers.noTriples();
+    }
+
     @Then("^I expect it to be (.*)")
     public void expectAvg(float expected){
         assertEquals(expected, result, 0.0001);

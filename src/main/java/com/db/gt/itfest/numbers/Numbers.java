@@ -39,7 +39,7 @@ class Numbers {
         return false;
     }
 
-    public int closerTo(Integer closer) {
+    int closerTo(Integer closer) {
         int aDiff = Math.abs(a - closer);
         int bDiff = Math.abs(b - closer);
 
@@ -49,9 +49,14 @@ class Numbers {
         if (bDiff < aDiff) {
             return b;
         }
-        return 0;  // i.e. aDiff == bDiff
+        return 0;
+    }
 
-        // Solution notes: aDiff/bDiff local vars clean the code up a bit.
-        // Could have "else" before the second if and the return 0.
+    boolean noTriples() {
+        for (int i=0; i < (array.size()-2); i++) {
+            int first = array.get(i);
+            if (array.get(i+1).equals(first) && array.get(i+2).equals(first)) return false;
+        }
+        return true;
     }
 }
