@@ -13,7 +13,7 @@ public class SpeedingSteps {
     private Speeding speeding;
     private int result;
 
-    @Given("I am crusing along at (\\d+) miles per hour")
+    @Given("I am cruising along at (\\d+) miles per hour")
     public void setSpeed(Integer speed){
         speeding = new Speeding(speed);
     }
