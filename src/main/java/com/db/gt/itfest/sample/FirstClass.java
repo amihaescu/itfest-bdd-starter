@@ -4,15 +4,21 @@ class FirstClass {
 
     private String string;
 
-    FirstClass(String input){
+    FirstClass(String input) {
         this.string = input;
     }
 
-    String getUpperCaseString(){
-        return string.toUpperCase();
+    /**
+     * Method returns the fully upper case version the the string
+     */
+    String getUpperCaseString() {
+        throw new RuntimeException();
     }
 
-    String getLowerCaseString(){
-        return string.toLowerCase();
+    /**
+     * Method returns the fully lower case version the the string
+     */
+    String getLowerCaseString() {
+        throw new RuntimeException();
     }
 }

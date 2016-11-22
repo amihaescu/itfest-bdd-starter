@@ -27,7 +27,7 @@ public class NumbersStepDefinition {
 
     @When("^I calculate the average")
     public void calculateAvg(){
-        result = numbers.calculate();
+        result = numbers.calculateAverage();
     }
 
     @When("I check if one of the first 4 elements in the array is a 9")

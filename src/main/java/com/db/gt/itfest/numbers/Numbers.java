@@ -5,7 +5,7 @@ import java.util.List;
 class Numbers {
 
     private List<Integer> array;
-    private int a,b;
+    private int a, b;
 
     Numbers(List<Integer> array) {
         this.array = array;
@@ -16,12 +16,11 @@ class Numbers {
         this.b = b;
     }
 
-    float calculate() {
-        int sum = 0;
-        for (int i : array) {
-            sum += i;
-        }
-        return ((float) sum / array.size());
+    /**
+     * Calculate the average of elements in the array
+     */
+    float calculateAverage() {
+        throw new RuntimeException();
     }
 
     /**
@@ -29,34 +28,22 @@ class Numbers {
      * The array length may be less than 4.
      */
     boolean arrayFrontNine() {
-        int end = array.size();
-        if (end > 4) end = 4;
-
-        for (int i = 0; i < end; i++) {
-            if (array.get(i) == 9) return true;
-        }
-
-        return false;
+        throw new RuntimeException();
     }
 
+    /**
+     * Given the numbers a and b this method should return the number which is closer to
+     * number passed in as a parameter. If the numbers a equally close the method should
+     * return 0
+     */
     int closerTo(Integer closer) {
-        int aDiff = Math.abs(a - closer);
-        int bDiff = Math.abs(b - closer);
-
-        if (aDiff < bDiff) {
-            return a;
-        }
-        if (bDiff < aDiff) {
-            return b;
-        }
-        return 0;
+        throw new RuntimeException();
     }
 
+    /**
+     * This method checks whether the array contains no triples - consecutive equal elements
+     */
     boolean noTriples() {
-        for (int i=0; i < (array.size()-2); i++) {
-            int first = array.get(i);
-            if (array.get(i+1).equals(first) && array.get(i+2).equals(first)) return false;
-        }
-        return true;
+        throw new RuntimeException();
     }
 }

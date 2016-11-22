@@ -1,14 +1,11 @@
 package com.db.gt.itfest.operators;
 
 import java.time.DayOfWeek;
-import java.util.Arrays;
-import java.util.List;
 
 class SleepIn {
 
     private DayOfWeek dayOfWeek;
     private boolean vacation;
-    private List<DayOfWeek> workDays = Arrays.asList(DayOfWeek.MONDAY, DayOfWeek.TUESDAY, DayOfWeek.WEDNESDAY, DayOfWeek.THURSDAY, DayOfWeek.FRIDAY);
 
     SleepIn() {
     }
@@ -26,7 +23,10 @@ class SleepIn {
         this.vacation = vacation;
     }
 
+    /**
+     * Method returns true if sleep is permitted given the conditions: day of week and whether I am on vacation
+     */
     boolean isSleepInPermitted() {
-        return vacation || !workDays.contains(dayOfWeek);
+        throw new RuntimeException();
     }
 }

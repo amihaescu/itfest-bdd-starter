@@ -22,11 +22,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="itfest-bdd" />
+        <module name="bdd" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="itfest-bdd" target="1.8" />
+      <module name="bdd" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
